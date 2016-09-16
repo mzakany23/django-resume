@@ -12,14 +12,17 @@
 
 <!-- riot-tags -->
 <script type='riot/tag' src="{% static 'riot-tags/popover.tag' %}"></script>
+<script type='riot/tag' src="{% static 'riot-tags/projects-list.tag' %}"></script>
+<script type='riot/tag' src="{% static 'riot-tags/modal.tag' %}"></script>
+<script type='riot/tag' src="{% static 'riot-tags/raw.tag' %}"></script>
 
 <!-- popover -->
 <script src="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.js"></script>
 
 <script type="text/javascript">
 	
-	riot.mount('popover-component')
-
+	riot.mount('*')
+	
 	if(screen.availWidth < 1280){
 	  $(function(){
 	    $('#resprow').html("<div class='row'><a href='http://www.meetup.com/members/108354402'>Extracurricular</a><div>")

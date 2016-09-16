@@ -1,11 +1,4 @@
 <div class="box">
 	<h2>Project Sample</h2>
-
-	<ul id="project" class='display-big'>
-		{% for project in projects %}
-			<li>
-				<a href="{{ project.href }}"><img src="{{ MEDIA_URL }}{{ project.thumbnail }}"></a>
-			</li>
-		{% endfor %}
-	</ul>
+	<projects-list></projects-list>
 </div>

@@ -4,6 +4,7 @@ from django.conf import settings
 
 # api
 from api.home.views import SkillView,AllSkillsView
+from api.projects.views import ProjectView
 
 admin.site.site_header = 'MCZ Resume Site'
 
@@ -20,12 +21,12 @@ urlpatterns = patterns('',
 urlpatterns += patterns('api.fundraiser.views',
 	url(r'^api/skill/(?P<id>\d+)',SkillView.as_view(),name='api_skill'),
 	url(r'^api/skills/$',AllSkillsView.as_view(),name='api_all_skills'),
+	url(r'^api/projects/$',ProjectView.as_view(),name='api_all_projects'),
 )
 
 # info
 urlpatterns += patterns('info.views',
 	url(r'^bio/(?P<id>\d+)/$','download_forms',name='download_forms')
-
 )
 
 # media

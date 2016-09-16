@@ -5,7 +5,9 @@
   <div class="contact-item">
     <div class="icon pull-left text-center"><span class="fa fa-file fa-fw"></span></div>
     {% for file in files %}
-      <div class="title only pull-right"><a href="{{ file.download_url }}">download {{ file.name }}</a></div>
+      <div class="title only pull-right"><a href="{{ file.download_url }}">
+        <img class='img-circle' src="{% static 'images/headshot1.jpg' %}" width='25' heigtht='25' style='margin-right:10px;'>download {{ file.name }}</a>
+      </div>
     {% endfor %}
   </div>
   {% endif %}
