@@ -1,0 +1,16 @@
+{% load staticfiles %}
+ <div class="row">
+  <div class="col-xs-12">
+    <div id="photo-header" class="text-center">
+      <!-- PHOTO (AVATAR) -->
+      <div id="photo">
+        <img src="{{ MEDIA_URL }}{{ info.mcz_image }}">
+      </div>
+      <div id="text-header">
+        {% autoescape off %}{{ info.main_title }}{% endautoescape %}
+        <br>
+        {% autoescape off %}{{ info.sub_title }}{% endautoescape %}
+      </div>
+    </div>
+  </div>
+</div>

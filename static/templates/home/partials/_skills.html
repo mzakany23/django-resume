@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<all-skills></all-skills>
+<div class="box">
+  <h2>Skills</h2>
+  <div class="skills">
+    {% if pdf %}
+    <img src="{{ MEDIA_URL }}/skill-images/skills-list.png">
+    {% else %}
+    {% for skill in skills %}
+      {% if skill.link %}
+        <div class="item-skills" data-percent="{{ skill.percent }}">
+            <a href="{{ skill.link }}" style="color: #ffffff">
+                <img src="{{ MEDIA_URL }}{{ skill.image }}" height='20' width='20'>
+                {{ skill.name }}</a>
+      {% else %}
+        <div class="item-skills" data-percent="{{ skill.percent }}">
+            <img src="{{ MEDIA_URL }}{{ skill.image }}" height='20' width='20'>
+            {{ skill.name }}</a>
+      {% endif %}
+    </div>  
+    {% endfor %}
+    
+    <div class="skills-legend clearfix">
+      <div class="legend-left legend">Beginner</div>
+      <div class="legend-left legend"><span>Proficient</span></div>
+      <div class="legend-right legend"><span>Expert</span></div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+
+
+
+

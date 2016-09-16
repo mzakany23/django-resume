@@ -1,0 +1,65 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'home/partials/_header.html' %}
+
+  <body>  
+
+    {% csrf_token %}
+
+    {% include 'home/partials/_analytics.html' %}
+    <div class="container">
+      
+      {% include 'home/partials/_updated.html' %}
+      
+      {% block content %}
+      {% include 'home/partials/_photo.html' %}
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-7">
+          <!-- PROJECTS -->
+          {% if not pdf %}
+            {% include 'home/partials/_sample_projects.html' %}
+          {% endif %}
+          <!-- ABOUT ME -->
+          {% include 'home/partials/_about.html' %}
+          <!-- EDUCATION -->
+          {% include 'home/partials/_education.html' %}
+          <!-- EXPERIENCES -->
+          {% include 'home/partials/_experience.html' %}
+        </div>
+
+        <div class="col-xs-12 col-sm-5">
+          <!-- CONTACT -->
+          <div class="box clearfix">
+            {% include 'home/partials/_contact.html' %}
+            <!-- BLOG -->
+            {% include 'home/partials/_blog.html' %}
+            <!-- SKILLS -->
+            {% include 'home/partials/_skills.html' %}
+            <!-- HOBBIES -->
+            {% include 'home/partials/_hobbies.html' %}
+          </div>
+      </div>
+      {% endblock %}
+    </div>
+    
+    {% include 'home/partials/_js.html' %}
+    
+    <script type="text/javascript">
+      $(this.popTag).webuiPopover({
+        title:'Box Office Mojo Visualization',
+        trigger:'hover',
+        width: 900,
+        height: 500,
+        closable: true,
+        animation: 'pop',
+        type:'iframe',
+        url:'http://mczapphome.us'
+      })
+    </script>
+  </body>
+  
+</html>

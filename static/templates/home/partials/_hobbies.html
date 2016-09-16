@@ -1,0 +1,8 @@
+{% load staticfiles %}
+
+<div class="box">
+  <h2>Hobbies or other interests</h2>
+  {% for hobby in hobbies %}
+  <div class="hobby">{{ hobby.title }}</div>
+  {% endfor %}
+</div>

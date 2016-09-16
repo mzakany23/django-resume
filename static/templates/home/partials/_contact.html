@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<div class="box clearfix">
+  <h2>Contact</h2>
+  {% if not pdf %}
+  <div class="contact-item">
+    <div class="icon pull-left text-center"><span class="fa fa-file fa-fw"></span></div>
+    {% for file in files %}
+      <div class="title only pull-right"><a href="{{ file.download_url }}">download {{ file.name }}</a></div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <div class="contact-item">
+    <div class="icon pull-left text-center"><span class="fa fa-phone fa-fw"></span></div>
+    <div class="title only pull-right">330-612-6183</div>
+  </div>
+  <div class="contact-item">
+    <div class="icon pull-left text-center"><span class="fa fa-twitter fa-fw"></span></div>
+    <div class="title pull-right">Github  </div>
+    <div class="description pull-right"><a href="https://github.com/mzakany23?tab=repositories" target="_blank">https://github.com/mzakany23</a></div>
+  </div>
+  <div class="contact-item">
+    <div class="icon pull-left text-center"><span class="fa fa-youtube fa-fw"></span></div>
+    <div class="title pull-right">Youtube</div>
+    <div class="description pull-right"><a href="https://www.youtube.com/user/mzakany">https://www.youtube.com/user/mzakany</a></div>
+  </div>
+  <div class="contact-item">
+    <div class="icon pull-left text-center"><span class="fa fa-envelope fa-fw"></span></div>
+    <div class="title only pull-right">mzakany@gmail.com</div>
+  </div>
+  <div class="contact-item">
+    <div class="icon pull-left text-center"><span class="fa fa-twitter fa-fw"></span></div>
+    <div class="title pull-right">Twitter</div>
+    <div class="description pull-right"><a href="https://twitter.com/mzakany">https://twitter.com/mzakany</a></div>
+  </div>
+
+  <div class="contact-item">
+    <div class="icon pull-left text-center"><span class="fa fa-linkedin fa-fw"></span></div>
+    <div class="title pull-right">LinkedIn</div>
+    <div class="description pull-right"><a href="https://www.linkedin.com/profile/preview?vpa=pub&locale=en_US" target="_blank">LinkedIn</a></div>
+  </div>
+</div>
+

@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<div class="box">
+  <h2>Experience</h2>
+  {% for job in experience %}
+  <div class="job clearfix">
+    <div class="row">
+      <div class="col-xs-4">
+        <div id='resprow' class="where">
+          {% autoescape off %}{{ job.title }}{% endautoescape %}
+        </div>
+        <div class="year">{% autoescape off %}{{ job.dates }}{% endautoescape %}</div>
+      </div>
+      <div class="col-xs-8">
+        {% autoescape off %}{{ job.description }}{% endautoescape %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}      
+</div>
+
+          
+        

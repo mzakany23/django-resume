@@ -1,0 +1,9 @@
+{% load staticfiles %}	
+<div class="box">
+	{% for section in sections %}
+		<h2>{{ section.title }}</h2>
+		<p>
+			{% autoescape off %}{{ section.body }}{% endautoescape %}
+		</p>
+	{% endfor %}
+</div>
