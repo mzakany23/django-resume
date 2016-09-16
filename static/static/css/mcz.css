@@ -1,0 +1,32 @@
+ul.display-big{
+	height:120px;
+	padding:0px;	
+	list-style-type:none;
+    white-space:nowrap;
+    overflow-x:auto;
+}
+
+ul.display-big li{
+	display: inline-block;
+}
+
+ul.display-big li img{
+	width:160px ;
+	height:100px;
+}
+
+ul.display-small{
+	padding:0px;
+}
+
+ul.display-small li{
+	list-style-type: none;
+}
+
+ul.display-small li img{
+	width:350px ;
+	height:250px;
+	margin-bottom: 10px;
+	border-bottom: 0.5px solid grey;
+}
+

@@ -5,3 +5,5 @@ fabfile.py
 *.json
 include
 *.pyc
+node_modules
+process-images
